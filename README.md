@@ -5,5 +5,3 @@
 
 - **Q2 (TypeScript + Node.js)**  
   Simple Banking System (RESTful API，in-memory 實作)  
-
-詳細題目描述與執行方式請參考各題資料夾內的 README.md
