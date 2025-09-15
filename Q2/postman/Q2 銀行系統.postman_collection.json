@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "7ca6f2d0-eba8-4726-b72f-8e660da5784a",
+		"name": "Q2 銀行系統",
+		"description": "這是一個簡易銀行系統的 API 測試集合，用來驗證建立帳戶、存款、提款與轉帳功能。",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29778769",
+		"_collection_link": "https://dark-capsule-12476.postman.co/workspace/robinstech~9ccc91a1-dce0-446f-a15e-1f500973e91e/collection/29778769-7ca6f2d0-eba8-4726-b72f-8e660da5784a?action=share&source=collection_link&creator=29778769"
+	},
+	"item": [
+		{
+			"name": "1.建立帳戶",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"hao\",\n  \"balance\": 50\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.存款",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 50\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/accounts/1/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts",
+						"1",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.提款",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/accounts/1/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts",
+						"1",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.轉帳",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fromId\": 1,\n  \"toId\": 2,\n  \"amount\": 80\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/accounts/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
