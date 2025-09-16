@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node dist/bin/www.js",
     "dev": "ts-node-dev src/bin/www.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -14,7 +15,12 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.4.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.1.3",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.2",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"

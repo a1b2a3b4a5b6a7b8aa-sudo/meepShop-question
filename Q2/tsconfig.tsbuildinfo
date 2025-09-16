@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/bin/www.ts","./src/enums/transactiontype.ts","./src/routes/accounts.ts","./src/services/bank.ts","./src/types/account.ts","./src/utils/lock.ts"],"version":"5.9.2"}
